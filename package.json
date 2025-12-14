@@ -10,10 +10,8 @@
   "dependencies": {
     "@ark-ui/solid": "5.30.0",
     "@emotion/css": "11.13.5",
-    "@jsonforms/core": "3.7.0",
     "@tanstack/solid-db": "0.1.54",
     "@tanstack/solid-form": "1.27.2",
-    "@tanstack/solid-pacer": "0.16.1",
     "@tanstack/solid-query": "5.90.15",
     "@tanstack/solid-router": "1.140.5",
     "@tanstack/virtual-file-routes": "1.140.0",
