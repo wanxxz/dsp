@@ -5,8 +5,8 @@
     }
   },
   "image": "node",
-  "name": "psm",
-  "runArgs": ["--name", "psm"],
+  "name": "dsp",
+  "runArgs": ["--name", "dsp"],
   "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
   "workspaceFolder": "/workspace"
 }
