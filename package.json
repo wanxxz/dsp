@@ -10,7 +10,6 @@
   "dependencies": {
     "@ark-ui/solid": "5.30.0",
     "@emotion/css": "11.13.5",
-    "@maxgraph/core": "0.22.0",
     "@tanstack/solid-db": "0.1.54",
     "@tanstack/solid-form": "1.27.2",
     "@tanstack/solid-query": "5.90.15",
@@ -23,11 +22,15 @@
     "arquero": "8.0.3",
     "consola": "3.4.2",
     "csv": "6.4.1",
+    "inversify": "7.10.8",
     "lodash": "4.17.21",
     "lucide-solid": "0.559.0",
     "nanoid": "5.1.6",
+    "reflect-metadata": "0.2.2",
     "robot3": "1.2.0",
     "solid-js": "1.9.10",
+    "sprotty": "1.4.0",
+    "sprotty-protocol": "1.4.0",
     "tabulator-tables": "6.3.1",
     "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz",
     "zod": "4.1.13"
