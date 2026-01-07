@@ -1,0 +1,21 @@
+import { createTransaction } from '@tanstack/solid-db'
+import { type Node, nodeLocalCollection, nodeServerCollection } from '../../collections'
+
+export async function createNode() {
+  const tx = createTransaction<Node>({
+    mutationFn: async ({ transaction }) => {
+      await Promise.all(
+        transaction.mutations.filter(m => m.collection === nodeServerCollection).map(m => Promise.resolve(m.modified))
+      )
+
+      nodeLocalCollection.utils.acceptMutations(transaction)
+    }
+  })
+
+  tx.mutate(() => {
+    nodeLocalCollection.insert({ id: 'draft-1' })
+    nodeServerCollection.insert({ id: '1' })
+  })
+
+  await tx.commit()
+}

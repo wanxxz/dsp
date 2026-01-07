@@ -4,8 +4,6 @@ import { createRootRoute, Outlet, useRouter } from '@tanstack/solid-router'
 import { onMount } from 'solid-js'
 import { getMessages, resolveLocale } from '../locale'
 
-const queryClient = new QueryClient()
-
 async function initLocale() {
   const locale = await resolveLocale()
   const messages = await getMessages(locale)
