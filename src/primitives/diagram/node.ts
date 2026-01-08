@@ -5,7 +5,11 @@ export async function createNode() {
   const tx = createTransaction<Node>({
     mutationFn: async ({ transaction }) => {
       await Promise.all(
-        transaction.mutations.filter(m => m.collection === nodeServerCollection).map(m => Promise.resolve(m.modified))
+        transaction.mutations
+          .filter(m => m.collection === nodeServerCollection)
+          .map(async m => {
+            // TODO
+          })
       )
 
       nodeLocalCollection.utils.acceptMutations(transaction)

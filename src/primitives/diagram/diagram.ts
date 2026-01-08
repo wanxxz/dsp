@@ -7,7 +7,9 @@ export async function createDiagram() {
       await Promise.all(
         transaction.mutations
           .filter(m => m.collection === diagramServerCollection)
-          .map(m => Promise.resolve(m.modified))
+          .map(async m => {
+            // TODO
+          })
       )
 
       diagramLocalCollection.utils.acceptMutations(transaction)
